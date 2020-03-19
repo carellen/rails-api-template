@@ -37,5 +37,9 @@ module RailsApiTemplate
     config.api_only = true
     config.hosts << 'api.lvh.me'
     config.generators.system_tests = nil
+
+    config.middleware.use ActionDispatch::Cookies
+    config.middleware.use ActionDispatch::Session::CacheStore
+    config.middleware.use ActionDispatch::Session::CookieStore, key: '_api-template_session'
   end
 end
