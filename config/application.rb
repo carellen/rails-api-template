@@ -35,6 +35,7 @@ module RailsApiTemplate
     end
 
     config.api_only = true
+    config.hosts << 'api.lvh.me'
     config.generators.system_tests = nil
   end
 end
