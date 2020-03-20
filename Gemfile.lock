@@ -61,6 +61,8 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2)
+    apipie-rails (0.5.17)
+      rails (>= 4.1)
     bootsnap (1.4.6)
       msgpack (~> 1.0)
     builder (3.2.4)
@@ -182,6 +184,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
+  apipie-rails
   bootsnap (>= 1.4.2)
   byebug
   factory_bot_rails

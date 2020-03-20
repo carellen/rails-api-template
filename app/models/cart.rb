@@ -11,7 +11,7 @@ class Cart < ActiveModelSerializers::Model
   end
 
   def remove(product_id)
-    products[product_id] > 1 ? products[product_id] -= 1 : products.delete(product_id)
+    products[product_id] && products[product_id] > 1 ? products[product_id] -= 1 : products.delete(product_id)
   end
 
   def calculate_products
