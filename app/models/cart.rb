@@ -10,6 +10,10 @@ class Cart < ActiveModelSerializers::Model
     products.merge!(new_entry) { |id, quantity, add| quantity + add }
   end
 
+  def remove(product_id)
+    products[product_id] > 1 ? products[product_id] -= 1 : products.delete(product_id)
+  end
+
   def calculate_products
     products.map do |id, quantity|
       product = Product.find(id)

@@ -12,6 +12,10 @@ module Api
         session[:cart] = @cart.products
       end
 
+      def destroy
+        @cart.remove(cart_params[:product_id].to_i)
+      end
+
       private
 
       def cart_params
